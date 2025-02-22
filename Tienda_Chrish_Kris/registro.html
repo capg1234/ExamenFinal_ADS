@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Comestibles</title>
+    <link rel="stylesheet" href="formStyle.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="imag/miniLogo.png" alt="Logo de la tienda" loading="lazy">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="carrito.html">Carrito de Compras</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="register">
+            <h2>Registro de Usuario</h2>
+            <form id="registrationForm">
+                <label for="nombres">Nombres:</label>
+                <input type="text" id="nombres" name="nombres" placeholder="Nombres" required>
+
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+
+                <label for="cedula">Número de Cédula:</label>
+                <input type="text" id="cedula" name="cedula" placeholder="Número de Cédula" pattern="\d{10}" title="Debe contener 10 dígitos" required>
+
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" placeholder="Dirección" required>
+
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" placeholder="Correo Electrónico" required>
+
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" placeholder="Contraseña" required>
+
+                <label for="telefono">Número de Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Número de Teléfono" pattern="\d{10}" title="Debe contener 10 dígitos" required>
+
+
+                <button type="submit">Registrar</button>
+            </form>
+            <p id="message"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tienda de Comestibles. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const nombres = document.getElementById("nombres").value;
+            const apellidos = document.getElementById("apellidos").value;
+            const cedula = document.getElementById("cedula").value;
+            const direccion = document.getElementById("direccion").value;
+            const correo = document.getElementById("correo").value;
+            const telefono = document.getElementById("telefono").value;
+            const password = document.getElementById("password").value;
+
+            if (!nombres || !apellidos || !cedula || !direccion || !correo || !telefono || !password) {
+                document.getElementById("message").textContent = "Por favor, complete todos los campos.";
+                document.getElementById("message").style.color = "red";
+                return;
+            }
+
+            console.log("Registro exitoso:", { nombres, apellidos, cedula, direccion, correo, telefono, password });
+            document.getElementById("message").textContent = "Registro exitoso.";
+            document.getElementById("message").style.color = "green";
+            document.getElementById("registrationForm").reset();
+        });
+    </script>
+</body>
+</html>
