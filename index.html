@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Comestibles</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="imag/miniLogo.png" alt="Logo de la tienda" loading="lazy">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li>
+                    <a href="carrito.html" class="carrito-link">
+                        Carrito (<span class="contador-carrito">0</span>)
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="best-sellers">
+            <h2>Productos Más Vendidos</h2>
+            <div class="product-list">
+                <article class="product-item">
+                    <img src="imag/papa.jpg" alt="Papa seleccionada" class="product-image" loading="lazy">
+                    <h3>Papa Premium</h3>
+                    <p>Producto fresco de la mejor calidad.</p>
+                    <p>Precio: $10.00</p>
+                    <button class="add-to-cart" data-name="Papa Premium" data-price="10.00">Agregar al Carrito</button>
+                </article>
+                <article class="product-item">
+                    <img src="imag/detergente.jpg" alt="Detergente en funda" class="product-image" loading="lazy">
+                    <h3>Detergente en Funda</h3>
+                    <p>Ideal para el lavado de ropa y limpieza del hogar.</p>
+                    <p>Precio: $15.00</p>
+                    <button class="add-to-cart" data-name="Detergente en Funda" data-price="15.00">Agregar al Carrito</button>
+                </article>
+                <article class="product-item">
+                    <img src="imag/cilantro.jpg" alt="Cilantro fresco" class="product-image" loading="lazy">
+                    <h3>Cilantro Fresco</h3>
+                    <p>Perfecto para dar sabor a tus comidas.</p>
+                    <p>Precio: $2.00</p>
+                    <button class="add-to-cart" data-name="Cilantro Fresco" data-price="2.00">Agregar al Carrito</button>
+                </article>
+                <article class="product-item">
+                    <img src="imag/piña.jpg" alt="Piña" class="product-image" loading="lazy">
+                    <h3>Piña Dulce</h3>
+                    <p>Fruta fresca y natural de la mejor calidad.</p>
+                    <p>Precio: $10.00</p>
+                    <button class="add-to-cart" data-name="Piña Dulce" data-price="10.00">Agregar al Carrito</button>
+                </article>
+                <article class="product-item">
+                    <img src="imag/queso.jpg" alt="queso" class="product-image" loading="lazy">
+                    <h3>Queso fresco</h3>
+                    <p>Fruta fresca y natural de la mejor calidad.</p>
+                    <p>Precio: $10.00</p>
+                    <button class="add-to-cart" data-name="Queso fresco" data-price="10.00">Agregar al Carrito</button>
+                </article>
+            </div>
+        </section>
+
+        <section id="offers">
+            <h2>Productos en Oferta</h2>
+            <div class="product-list">
+                <article class="product-item">
+                    <img src="imag/cebolla.jpg" alt="Cebolla blanca" class="product-image" loading="lazy">
+                    <h3>Cebolla Blanca</h3>
+                    <p>Aprovecha la oferta con un 20% de descuento.</p>
+                    <p>Precio: $8.00 <span class="original-price">$10.00</span></p>
+                    <button class="add-to-cart" data-name="Cebolla Blanca" data-price="8.00">Agregar al Carrito</button>
+                </article>
+                <article class="product-item">
+                    <img src="imag/doritos.jpg" alt="Doritos tamaño fiesta" class="product-image" loading="lazy">
+                    <h3>Doritos Fiesta</h3>
+                    <p>Promoción especial con 20% de descuento.</p>
+                    <p>Precio: $12.00 <span class="original-price">$15.00</span></p>
+                    <button class="add-to-cart" data-name="Doritos Fiesta" data-price="12.00">Agregar al Carrito</button>
+                </article>
+                <article class="product-item">
+                    <img src="imag/agua.jpg" alt="Pack de agua" class="product-image" loading="lazy">
+                    <h3>Pack de Agua</h3>
+                    <p>Hidratación garantizada con 18% de descuento.</p>
+                    <p>Precio: $18.00 <span class="original-price">$22.00</span></p>
+                    <button class="add-to-cart" data-name="Pack de Agua" data-price="18.00">Agregar al Carrito</button>
+                </article>
+                <article class="product-item">
+                    <img src="imag/verde.jpg" alt="Verde" class="product-image" loading="lazy">
+                    <h3>Verde</h3>
+                    <p>Aprovecha la oferta con un 20% de descuento.</p>
+                    <p>Precio: $8.00 <span class="original-price">$10.00</span></p>
+                    <button class="add-to-cart" data-name="Verde" data-price="8.00">Agregar al Carrito</button>
+                </article>
+                <article class="product-item">
+                    <img src="imag/gatoComida.jpg" alt="Comida de gato" class="product-image" loading="lazy">
+                    <h3>Comida de gato</h3>
+                    <p>Aprovecha la oferta con un 20% de descuento.</p>
+                    <p>Precio: $8.00 <span class="original-price">$10.00</span></p>
+                    <button class="add-to-cart" data-name="Comida de gato" data-price="8.00">Agregar al Carrito</button>
+                </article>
+            </div>
+        </section>
+
+        <section id="store-info">
+            <h2>Información</h2>
+            <p><strong>Dirección:</strong> Av Santa Cecilia, Ext: 10, Guayaquil 090505</p>
+            <p><strong>Teléfono:</strong> (+593) 099 421 8004</p>
+            <p><strong>Horario:</strong> Lunes a Viernes, 6:30 AM - 10:00 PM</p>
+            <p><strong>Horario:</strong> Sabado a Domingo, 8:00 AM - 10:00 PM</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tienda de Comestibles. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="carritoJS.js"></script>
+    <script>
+        // Agregar evento a los botones "Agregar al Carrito"
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const productName = this.getAttribute('data-name');
+                const productPrice = parseFloat(this.getAttribute('data-price'));
+                addToCart(productName, productPrice);
+            });
+        });
+    </script>
+</body>
+</body>
+</html>

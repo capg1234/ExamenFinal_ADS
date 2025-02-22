@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método de Pago</title>
+    <link rel="stylesheet" href="payStyle.css"> <!-- Puedes enlazar tu archivo CSS aquí -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="imag/miniLogo.png" alt="Logo de la tienda" loading="lazy">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Método de Pago</h2>
+        <form id="payment-form">
+            <div class="form-group">
+                <label for="tipo-tarjeta">Tipo de Tarjeta</label>
+                <select id="tipo-tarjeta" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="visa">Visa</option>
+                    <option value="mastercard">MasterCard</option>
+                    <option value="amex">American Express</option>
+                    <option value="discover">Discover</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="nombre-tarjeta">Nombre en la Tarjeta</label>
+                <input type="text" id="nombre-tarjeta" required>
+            </div>
+            <div class="form-group">
+                <label for="numero-tarjeta">Número de Tarjeta</label>
+                <input type="text" id="numero-tarjeta" placeholder="1234 5678 9012 3456" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha-expiracion">Fecha de Expiración</label>
+                <input type="text" id="fecha-expiracion" placeholder="MM/AA" required>
+            </div>
+            <div class="form-group">
+                <label for="codigo-seguridad">Código de Seguridad</label>
+                <input type="number" id="codigo-seguridad" placeholder="123" required>
+            </div>
+            <div class="form-group">
+                <label for="direccion-facturacion">Dirección de Facturación</label>
+                <input type="text" id="direccion-facturacion" placeholder="Calle, Número, Ciudad" required>
+            </div>
+            <button type="submit" class="btn-confirmar">Confirmar Pago</button>
+        </form>
+        <div id="mensaje-exito" style="display: none; text-align: center; margin-top: 20px; color: green;">
+            ¡Compra exitosa! Gracias por su compra.
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('payment-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío del formulario
+            document.getElementById('mensaje-exito').style.display = 'block'; // Muestra el mensaje de éxito
+            this.reset(); // Opcional: reinicia el formulario
+        });
+    </script>
+</body>
+</html>
